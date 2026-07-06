@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { skills } from "../data/skills"
 import { projects } from "../data/projects"
+import { services } from "../data/services"
 
 function FaqItem({ question, answer, defaultOpen }: { question: string; answer: string; defaultOpen?: boolean }) {
   const [open, setOpen] = useState(defaultOpen ?? false)
@@ -117,6 +118,37 @@ export default function RightPanel() {
                   </div>
                 )}
               </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="space-y-6">
+          <h2 className="text-lg font-medium text-zinc-200">
+            Services
+          </h2>
+          <div className="space-y-3">
+            {services.map((service) => (
+              <a
+                key={service.name}
+                href={service.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block border border-zinc-800 rounded-sm px-4 py-3 hover:border-zinc-600 transition-colors duration-300"
+              >
+                <div className="flex items-center justify-between">
+                  <h3 className="text-sm font-medium text-zinc-200 group-hover:text-zinc-100 transition-colors duration-200">
+                    {service.name}
+                  </h3>
+                  {service.tag && (
+                    <span className="text-[10px] uppercase tracking-wider text-zinc-500">
+                      {service.tag}
+                    </span>
+                  )}
+                </div>
+                <p className="mt-1 text-sm text-zinc-500 leading-relaxed">
+                  {service.description}
+                </p>
+              </a>
             ))}
           </div>
         </section>
