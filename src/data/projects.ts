@@ -2,6 +2,7 @@ export interface Project {
   name: string
   description: string
   href: string
+  links?: { label: string; href: string }[]
 }
 
 export const projects: Project[] = [
@@ -9,11 +10,9 @@ export const projects: Project[] = [
     name: "deepseek-harness",
     description: "A lightweight harness for the DeepSeek API as a base for systems that use it.",
     href: "https://github.com/HologramSteve/deepseek-harness",
-  },
-  {
-    name: "deepseek-harness.js",
-    description: "A JavaScript port of the DeepSeek harness.",
-    href: "https://github.com/HologramSteve/deepseek-harness.js",
+    links: [
+      { label: "JS port", href: "https://github.com/HologramSteve/deepseek-harness.js" },
+    ],
   },
   {
     name: "nyx",

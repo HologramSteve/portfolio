@@ -80,20 +80,43 @@ export default function RightPanel() {
           </h2>
           <div className="space-y-4">
             {projects.map((project) => (
-              <a
+              <div
                 key={project.name}
-                href={project.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group block border border-zinc-800 rounded-sm p-4 hover:border-zinc-600 transition-colors duration-300"
+                className="border border-zinc-800 rounded-sm p-4 hover:border-zinc-600 transition-colors duration-300"
               >
-                <h3 className="text-sm font-medium text-zinc-200 group-hover:text-zinc-100 transition-colors duration-200">
-                  {project.name}
-                </h3>
+                <a
+                  href={project.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group"
+                >
+                  <h3 className="text-sm font-medium text-zinc-200 group-hover:text-zinc-100 transition-colors duration-200">
+                    {project.name}
+                  </h3>
+                </a>
                 <p className="mt-1.5 text-sm text-zinc-500 leading-relaxed">
                   {project.description}
                 </p>
-              </a>
+                {project.links && project.links.length > 0 && (
+                  <div className="mt-2 flex gap-3">
+                    {project.links.map((link) => (
+                      <a
+                        key={link.label}
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group inline-flex items-center gap-1 text-xs text-zinc-500 hover:text-zinc-100 transition-colors duration-200"
+                      >
+                        {link.label}
+                        <svg className="size-2.5 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M7 17L17 7" />
+                          <path d="M7 7h10v10" />
+                        </svg>
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </div>
             ))}
           </div>
         </section>
