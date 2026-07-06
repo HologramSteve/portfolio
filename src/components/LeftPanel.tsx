@@ -5,7 +5,7 @@ export default function LeftPanel() {
         <h1 className="text-4xl lg:text-5xl font-light tracking-tight text-zinc-100 leading-[1.1]">
           Hologram
           <br />
-          <span className="font-semibold">Steve</span>
+          <span className="font-semibold">Steve ☦</span>
         </h1>
       </div>
 

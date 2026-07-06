@@ -40,6 +40,39 @@ export default function RightPanel() {
   return (
     <div className="h-full overflow-y-auto p-10 lg:p-14 xl:p-16 scrollbar-thin">
       <div className="max-w-xl space-y-20">
+        <section className="space-y-6">
+          <h2 className="text-lg font-medium text-zinc-200">
+            Services
+          </h2>
+          <div className="space-y-3">
+            {services.map((service) => (
+              <a
+                key={service.name}
+                href={service.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block bg-zinc-800/20 rounded-sm transition-all duration-300 hover:bg-zinc-800/40"
+              >
+                <div className="px-5 py-4 border-l-2 border-zinc-600 group-hover:border-zinc-400 transition-colors duration-300">
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-base font-medium text-zinc-100 group-hover:text-white transition-colors duration-200">
+                      {service.name}
+                    </h3>
+                    {service.tag && (
+                      <span className="text-[10px] uppercase tracking-widest text-zinc-400 bg-zinc-800/60 px-2 py-0.5 rounded">
+                        {service.tag}
+                      </span>
+                    )}
+                  </div>
+                  <p className="mt-1.5 text-sm text-zinc-400 leading-relaxed group-hover:text-zinc-300 transition-colors duration-200">
+                    {service.description}
+                  </p>
+                </div>
+              </a>
+            ))}
+          </div>
+        </section>
+
         <section className="space-y-4">
           <div className="group relative">
             <h2 className="text-lg font-medium text-zinc-200 border-b border-dashed border-zinc-600 inline-block cursor-help transition-colors duration-300 group-hover:border-zinc-400">
@@ -118,39 +151,6 @@ export default function RightPanel() {
                   </div>
                 )}
               </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="space-y-6">
-          <h2 className="text-lg font-medium text-zinc-200">
-            Services
-          </h2>
-          <div className="space-y-3">
-            {services.map((service) => (
-              <a
-                key={service.name}
-                href={service.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group block bg-zinc-800/20 rounded-sm transition-all duration-300 hover:bg-zinc-800/40"
-              >
-                <div className="px-5 py-4 border-l-2 border-zinc-600 group-hover:border-zinc-400 transition-colors duration-300">
-                  <div className="flex items-center justify-between">
-                    <h3 className="text-base font-medium text-zinc-100 group-hover:text-white transition-colors duration-200">
-                      {service.name}
-                    </h3>
-                    {service.tag && (
-                      <span className="text-[10px] uppercase tracking-widest text-zinc-400 bg-zinc-800/60 px-2 py-0.5 rounded">
-                        {service.tag}
-                      </span>
-                    )}
-                  </div>
-                  <p className="mt-1.5 text-sm text-zinc-400 leading-relaxed group-hover:text-zinc-300 transition-colors duration-200">
-                    {service.description}
-                  </p>
-                </div>
-              </a>
             ))}
           </div>
         </section>
