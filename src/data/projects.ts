@@ -6,18 +6,23 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    name: "Project One",
-    description: "A Discord bot with moderation and utility commands. Built for community servers.",
-    href: "https://github.com/HologramSteve",
+    name: "nyx",
+    description: "A system to launch fully autonomous AI agents that live in Discord for different tasks.",
+    href: "https://github.com/HologramSteve/nyx",
   },
   {
-    name: "Project Two",
-    description: "A web dashboard for managing server analytics and user activity.",
-    href: "https://github.com/HologramSteve",
+    name: "wrts-forum-api",
+    description: "A wrapper for the studygo.com forum API.",
+    href: "https://github.com/HologramSteve/wrts-forum-api",
   },
   {
-    name: "Project Three",
-    description: "An API wrapper for interacting with third-party services in real-time.",
-    href: "https://github.com/HologramSteve",
+    name: "erlcserverapiwrapper",
+    description: "A simple wrapper for the ER:LC server API.",
+    href: "https://github.com/HologramSteve/erlcserverapiwrapper",
+  },
+  {
+    name: "waffle",
+    description: "A very bad JS coded image format.",
+    href: "https://github.com/HologramSteve/waffle",
   },
 ]
