@@ -7,6 +7,19 @@ export default function LeftPanel() {
           <br />
           <span className="font-semibold">Steve ☦</span>
         </h1>
+        <div className="inline-flex items-center gap-1.5 text-sm text-zinc-400 mt-3">
+          <span className="size-2 rounded-full bg-emerald-400/70" />
+          Co-Founder @
+          <a
+            href="https://astrolink.cc"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 text-zinc-400 hover:text-zinc-100 transition-colors duration-300"
+          >
+            <img src="/astrolink.png" alt="AstroLink" className="size-4 object-contain" />
+            AstroLink.cc
+          </a>
+        </div>
       </div>
 
       <div className="space-y-12">
@@ -16,19 +29,6 @@ export default function LeftPanel() {
             <br />
             Building Discord bots and web apps.
           </p>
-          <div className="inline-flex items-center gap-1.5 text-xs text-zinc-500">
-            <span className="size-1.5 rounded-full bg-emerald-400/70" />
-            Co-Founder @
-            <a
-              href="https://astrolink.cc"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 text-zinc-500 hover:text-zinc-100 transition-colors duration-300"
-            >
-              <img src="/astrolink.png" alt="AstroLink" className="size-3.5 object-contain" />
-              AstroLink.cc
-            </a>
-          </div>
         </div>
 
         <div className="flex gap-6">

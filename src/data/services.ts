@@ -25,9 +25,9 @@ export const services: Service[] = [
     tag: "Soon",
   },
   {
-    name: "AstroLink",
+    name: "AstroShare",
     description: "File hosting service.",
-    href: "https://astrolink.cc",
+    href: "https://share.astrolink.cc",
     tag: "Co-Founder",
   },
   {

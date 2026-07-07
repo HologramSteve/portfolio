@@ -1,9 +1,9 @@
-import { useState } from "react"
+import { useState, type ReactNode } from "react"
 import { skills } from "../data/skills"
 import { projects } from "../data/projects"
 import { services } from "../data/services"
 
-function FaqItem({ question, answer, defaultOpen }: { question: string; answer: string; defaultOpen?: boolean }) {
+function FaqItem({ question, answer, defaultOpen }: { question: string; answer: ReactNode; defaultOpen?: boolean }) {
   const [open, setOpen] = useState(defaultOpen ?? false)
 
   return (
